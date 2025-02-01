@@ -178,7 +178,7 @@ class DependencyContainer extends Field
      * @param mixed $resource
      * @param null  $attribute
      */
-    public function resolveForDisplay($resource, $attribute = null)
+    public function resolveForDisplay($resource, $attribute = null): void
     {
         foreach ($this->meta['fields'] as $field) {
             $field->resolveForDisplay($resource);
@@ -418,7 +418,7 @@ class DependencyContainer extends Field
      * @param NovaRequest $request
      * @return array
      */
-    public function getRules(NovaRequest $request)
+    public function getRules(NovaRequest $request): array
     {
         return $this->getSituationalRulesSet($request);
     }
